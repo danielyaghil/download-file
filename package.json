@@ -1,5 +1,5 @@
 {
-    "name": "download-file",
+    "name": "@danielyaghil/download-file",
     "version": "1.0.0",
     "description": "A simple method to download a URL and save locally",
     "main": "index.js",
