@@ -1,5 +1,5 @@
 {
-    "name": "@danielyaghil/download-helper",
+    "name": "@danielyaghil/dlf-helper",
     "version": "0.9.1",
     "description": "A simple method to download a file from a URL and save locally",
     "main": "index.js",
