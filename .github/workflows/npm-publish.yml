@@ -7,7 +7,7 @@ on:
         branches:
             - 'main'
         paths:
-            - 'index.js'
+            - index.js
             - package.json
             - package-lock.json
             - README.rnd
