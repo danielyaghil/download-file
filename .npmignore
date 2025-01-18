@@ -1,0 +1,16 @@
+/.github/
+/.vscode/
+/.eslintrc.json
+/.prettierrc.json
+/.gitignore
+/.npmignore
+/.prettierignore
+/eslint.config.mjs
+/src/api
+/scr/cli
+/cmd/
+/docs/
+/downloads/
+/reports/
+/apps/
+/samples/
