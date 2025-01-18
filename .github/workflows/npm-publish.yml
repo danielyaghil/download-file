@@ -54,12 +54,6 @@ jobs:
             - name: Install
               run: npm ci
 
-            - name: Copy README
-              run: cp ../README.md README.md
-
-            - name: Copy LICENSE
-              run: cp ../LICENSE LICENSE
-
             - uses: JS-DevTools/npm-publish@v3
               with:
                   token: ${{ secrets.NPM_TOKEN }}
