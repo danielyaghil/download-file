@@ -52,7 +52,6 @@ jobs:
                   node-version: 20.x
 
             - name: Install
-              working-directory: src
               run: npm ci
 
             - name: Copy README
