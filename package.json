@@ -1,0 +1,25 @@
+{
+  "name": "download-file",
+  "version": "1.0.0",
+  "description": "A simple method to download a URL and save locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielyaghil/download-file.git"
+  },
+  "keywords": [
+    "download"
+  ],
+  "author": "Daniel Yaghil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielyaghil/download-file/issues"
+  },
+  "homepage": "https://github.com/danielyaghil/download-file#readme",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
