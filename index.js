@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-async function downloadFile(url, path, fileName, override = false) {
+async function downloadFile(url, path, fileName, options) {
     try {
         if (!fs.existsSync(path)) {
             fs.mkdirSync(path, { recursive: true });
@@ -9,7 +9,7 @@ async function downloadFile(url, path, fileName, override = false) {
 
         const fileLocalPath = `${path}/${fileName}`;
 
-        if (!override) {
+        if (options && !options.override) {
             const existLocalApp = fs.existsSync(fileLocalPath);
             if (existLocalApp) {
                 console.log(`App ${fileLocalPath} already downloaded`);
@@ -21,11 +21,15 @@ async function downloadFile(url, path, fileName, override = false) {
 
         let downloadResponse = null;
         try {
-            downloadResponse = await axios({
+            const axiosOpts = {
                 url: url,
                 method: 'GET',
                 responseType: 'stream'
-            });
+            };
+            if (options && options.auth) {
+                axiosOpts.auth = options.auth;
+            }
+            downloadResponse = await axios(axiosOpts);
         } catch (error) {
             console.error(`Error downloading file ${url}: ${error}`);
             return null;
